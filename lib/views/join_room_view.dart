@@ -14,7 +14,6 @@ class JoinRoomView extends StatefulWidget {
 class _JoinRoomViewState extends State<JoinRoomView> {
   late final TextEditingController _nickNameController;
   List<PrefencesWidget> prefences = [];
-  PrefencesWidget prefencesWidget = const PrefencesWidget();
   @override
   void initState() {
     super.initState();

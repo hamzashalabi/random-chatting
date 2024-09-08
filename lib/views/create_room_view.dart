@@ -15,7 +15,7 @@ class _CreateRoomViewState extends State<CreateRoomView> {
   late final TextEditingController _nickNameController;
   late final TextEditingController _prefrencesController;
   List<PrefencesWidget> prefences = [];
-  PrefencesWidget prefencesWidget = const PrefencesWidget();
+
   @override
   void initState() {
     super.initState();
@@ -28,6 +28,13 @@ class _CreateRoomViewState extends State<CreateRoomView> {
     super.dispose();
     _nickNameController.dispose();
     _prefrencesController.dispose();
+  }
+
+  void _removePreference(String text) {
+    setState(() {
+      prefences.removeWhere(
+          (widget) => widget.chipText == text); // Remove based on chipText
+    });
   }
 
   @override
@@ -64,10 +71,17 @@ class _CreateRoomViewState extends State<CreateRoomView> {
                 suffixIcon: IconButton(
                   onPressed: () {
                     setState(() {
-                      if (prefences.length >= 3) {
+                      if (prefences.length < 3 &&
+                          _prefrencesController.text.isNotEmpty) {
+                        final prefencesWidget = PrefencesWidget(
+                          chipText: _prefrencesController.text,
+                          onDelete: _removePreference,
+                        );
+                        _prefrencesController.clear();
+                        prefences.add(prefencesWidget);
+                      } else {
                         return;
                       }
-                      prefences.add(prefencesWidget);
                     });
                   },
                   icon: const Icon(Icons.add),

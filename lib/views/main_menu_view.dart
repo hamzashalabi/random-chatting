@@ -17,14 +17,14 @@ class MainMenuView extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, CreateRoomView.createRoomViewRoute);
             },
-            buttonText: 'Create Room',
+            buttonText: 'Create A Chat Room',
           ),
           const SizedBox(height: 20),
           CustomButton(
             onPressed: () {
               Navigator.pushNamed(context, JoinRoomView.joinRoomViewRoute);
             },
-            buttonText: 'Join Room',
+            buttonText: 'Join A Random Chat',
           ),
         ],
       ),

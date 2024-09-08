@@ -1,16 +1,13 @@
 # randomchat
 
 A new Flutter project.
+# first commit
+so the app as the name suggests is a random chat (will almost random) app 
+the ui of this app is almost done with minor changes for the future 
+the ui is almost the same as the tictactoe project ui 
+mainly because this app is nothing but me getting to know more about 
+node js and mongo DB and i want to delive in more in that aspect and not the ui.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
